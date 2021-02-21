@@ -15,7 +15,7 @@ function promptUser() {
         .prompt(questions)
         .then(answers => {
             const readMeData = generateMarkdown(answers);
-            writeToFile('test.md', readMeData);
+            writeToFile('README.md', readMeData);
         })
         .catch(err => console.error(err));
 }
