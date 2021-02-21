@@ -10,12 +10,12 @@ const questions = require('./utils/questions')
 
 // TODO: Create a function to write README file
 
-function promptUser() {
+function promptUser(fileName) {
     inquirer
         .prompt(questions)
         .then(answers => {
             const readMeData = generateMarkdown(answers);
-            writeToFile('README.md', readMeData);
+            writeToFile(fileName, readMeData);
         })
         .catch(err => console.error(err));
 }
@@ -27,10 +27,24 @@ function writeToFile(fileName, data) {
     })
 }
 
+function getFileName() {
+    inquirer
+        .prompt(
+            {
+                type: 'input',
+                name: 'fileName',
+                message: 'How would you like to call the file?',
+                default: 'README.md'
+            }
+        )
+        .then(data => promptUser(data.fileName)) // The data is the file name
+        .catch(err => console.log(err));
+}
+
 // TODO: Create a function to initialize app
 function init() {
     console.log('Welcome to the Read-Me-Generator!');
-    promptUser();
+    getFileName();
 }
 
 // Function call to initialize app

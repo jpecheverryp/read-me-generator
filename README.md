@@ -10,7 +10,10 @@ This is a CLI (Command line interface) designed to generate a Read me file using
 - [Testing Instructions](#testing)
 - [Questions](#questions)
 ## Installation
-You can fork this repository and clone it on your local machine
+You can fork this repository and clone it on your local machine, you should also install the node modules by doing:
+```
+npm i
+```
 ## Usage
 This CLI can be called using the command node . or the command node index.js from the root directory of the repository
 ## License
