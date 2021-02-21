@@ -2,6 +2,8 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Description
 This is a CLI (Command line interface) designed to generate a Read me file using the data provided by the user. It can be used to make this process faster because it gives a template to our documentation. It also helps to have consistency across different projects
+## Video Demonstration
+[Link to YouTube](https://youtu.be/SDOtYB5sfgE)
 ## Table of contents
 - [Installation](#installation)
 - [Usage](#usage)
